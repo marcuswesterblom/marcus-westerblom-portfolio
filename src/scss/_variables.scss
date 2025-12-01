@@ -6,7 +6,7 @@ $accent-color: #D97127;
 $gradient-color: #37291E;
 
 /* Fonts */
-$alumni-sans: "Alumni Sans Pinstripe", sans-serif;
+$alumni-sans: "Alumni Sans", sans-serif;
 
 /* Font sizes */
 
@@ -15,7 +15,7 @@ $h2: 32px;
 
 /* Border */
 $border-radius: 25px;
-$border: 5px;
+$border: 5px solid $secondary-color;
 
 /* Breakpoints for media queries */
 $grid-breakpoints: (sm: 480px, md: 768px, lg: 800px);

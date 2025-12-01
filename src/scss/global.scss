@@ -1,8 +1,121 @@
 @import "./variables";
 @import "./mixins";
+@import "./keyframes";
 
 #wrapper {
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(to bottom, $gradient-color, $primary-color);
-}
+    position: relative;
+    #navBar {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        #menuNotActive {
+            position: absolute;
+            z-index: 2;
+            font-family: $alumni-sans;
+            font-weight: 700;
+            font-size: 48px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: $secondary-color;
+            cursor: pointer;
+            opacity: 100%;
+            &.show {
+                opacity: 100%;
+                z-index: 2;
+            }
+            &.hide {
+                opacity: 0;
+                z-index: 1;
+            } 
+        }
+        #menuActive {
+            position: absolute;
+            z-index: 1;
+            font-family: $alumni-sans;
+            font-weight: 900;
+            font-size: 48px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            color: $secondary-color;
+            cursor: pointer;
+            opacity: 0;
+            &.show {
+                opacity: 100%;
+                z-index: 2;
+                color: $primary-color;
+            }
+            &.hide {
+                opacity: 0;
+                z-index: 1;
+            }
+        }
+        nav {
+            @include flex;
+            width: 0;
+            background-color: $secondary-color;
+            border-radius: 15px;
+            position: absolute;
+            height: 0;
+            overflow: hidden;
+            &.show {
+                animation: menuMobile 2s ease-in-out forwards;
+                a {
+                    transition: opacity 0.5s ease 1s;
+                    opacity: 1;
+                }
+            }
+            &.hide {
+                animation: menuMobileClose 2s ease-in-out forwards;
+                a {
+                    transition: opacity 0.2s ease 0.2s;
+                    opacity: 0;
+                }
+            }
+            }
+            a {
+                font-style: $alumni-sans;
+                color: $primary-color;
+                font-weight: 900;
+                text-transform: uppercase;
+                opacity: 0;
+            }
+        }
+    }
+    #containerAll {
+        border: $border;
+        border-radius: $border-radius;
+        height: calc(100% - 20px);
+        padding: 5px;
+        margin: 10px;
+        #containerHome {
+            height: 100%;
+            @include flex;
+            h1 {
+                color: $secondary-color;
+                font-family: $alumni-sans;
+                font-weight: 700;
+                font-size: $h1;
+                text-transform: uppercase;
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                text-decoration-thickness: 5px;
+            }
+            h2 {
+                color: $accent-color;
+                font-family: $alumni-sans;
+                font-weight: 700;
+                font-size: $h2;
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                text-decoration-thickness: 5px;
+            }
+        }
+    }

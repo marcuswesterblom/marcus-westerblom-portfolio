@@ -9,14 +9,23 @@ export const createHtml = () => {
     const h1 = document.createElement("h1");
     const headingHome = document.createElement("h2");
     const nav = document.createElement("nav");
+    const menuNotActive = document.createElement("p");
+    const menuActive = document.createElement("p");
 
     containerTextHome.id = "containerTextHome";
     h1.textContent = "Marcus Westerblom";
     headingHome.textContent = "Front end developer";
+    nav.id = "nav";
+    menuNotActive.id = "menuNotActive"
+    menuActive.id = "menuActive";
+    menuNotActive.textContent = "+";
+    menuActive.textContent = "-";
 
     containerHome?.appendChild(containerTextHome);
     containerTextHome?.appendChild(h1);
     containerTextHome.appendChild(headingHome);
+    navBar?.appendChild(menuNotActive);
+    navBar?.appendChild(menuActive);
     navBar?.appendChild(nav);
 
     const links = [
