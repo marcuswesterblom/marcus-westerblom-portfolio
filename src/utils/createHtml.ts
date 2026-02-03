@@ -21,8 +21,9 @@ export const createHtml = () => {
     const span4 = document.createElement("span");
     const projectTitle = document.createElement("h2");
     const contactTitle = document.createElement("h2");
-    const contactText = document.createElement("h3");
+    const contactText = document.createElement("h4");
     const contactList = document.createElement("ul");
+    const status = document.createElement("h4");
 
     competencesContainer.id = "competencesContainer";
     containerTextHome.id = "containerTextHome";
@@ -42,13 +43,16 @@ export const createHtml = () => {
     contactText.id = "contactText";
     contactList.id = "contactList";
     containerContactInfo.id = "containerContactInfo";
+    status.id = "status";
+    status.textContent = "Available for internship - Fall 2026";
 
     contactTitle.textContent = "Contact me";
-    contactText.textContent = "Do not hesitate to reach out to me";
+    contactText.textContent = "I'm currently looking for internship opportunities. Feel free to reach out via any of the following methods:";
 
     sectionHero?.appendChild(containerTextHome);
     containerTextHome?.appendChild(h1);
     containerTextHome.appendChild(headingHome);
+    containerTextHome.appendChild(status);
     navBar?.appendChild(spanContainer);
     spanContainer?.appendChild(span1);
     spanContainer?.appendChild(span2);
@@ -112,7 +116,7 @@ export const createHtml = () => {
         {   
             label: "E-mail", 
             value: "marcus.vesterblom@gmail.com",
-            href: "mailto:marcus.vesterblom@gmail.com" 
+            href: "mailto:marcus.vesterblom@gmail.com", 
         },
         {
             label: "Phone",
@@ -136,14 +140,16 @@ export const createHtml = () => {
         const p = document.createElement("p");
         const a = document.createElement("a");
 
-        a.href = contact.href;
-        p. textContent = `${contact.label}:`
+        p.textContent = `${contact.label}:`
         a.textContent =  `${contact.value}`;
-        a.target = "_blank";
+        a.href = contact.href;
 
+        if(contact.href.startsWith("https")) {
+            a.target = "_blank";
+            a.rel = "noopener noreferrer";
+        }
         li.append(p, a);
         contactList.appendChild(li);
-    });
-    
+    })
 }
 

@@ -11,6 +11,11 @@
     #span4 {
         @include span;
     }
+    #contactText{
+        font-weight: 700; 
+        padding: 0;
+
+    }
     #containerContactInfo {
         margin: 20px;
         z-index: 12;
