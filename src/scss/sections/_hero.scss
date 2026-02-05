@@ -7,6 +7,7 @@
     animation: fadeIn 0.3s ease-in-out forwards;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.236));
     @include flex;
+      flex: 1;
     @include respond(md){
         width: 100%;
         min-width: 400px;
@@ -16,7 +17,6 @@
     }
     #sectionHero {
         height: 100%;
-        padding: 20px;
         z-index: 1;
         @include flex;
         h2 {
