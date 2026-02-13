@@ -38,7 +38,7 @@ export const projectsListener = () => {
         cardTitle.textContent = project.title;
         cardTitle.id = "cardTitle";
         cardDescription.id = "cardDescription";
-        cardDescription.textContent = project.description;
+        cardDescription.innerHTML = project.description;
         keywords.innerHTML = project.keywords.join(", ");
         keywords.id = "keywords";
         liveBttn.id = "liveBttn";

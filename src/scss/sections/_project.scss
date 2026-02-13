@@ -23,6 +23,13 @@
         color: white;
         padding: 10px;
     }
+    a {
+        color: #b65800;
+        font-weight: 800;
+        &:hover {
+            color: #ffb46f;
+        }
+    }
     #bttnDiv{
         margin-top: 20px;
     }
