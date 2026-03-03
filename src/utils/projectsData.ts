@@ -6,7 +6,7 @@ export const projects = [
         "A frontend web application that integrates data from three different APIs to provide travel insights for a selected country. Users can search for a country to view general information (flag, capital, population, language, currency), real-time weather and local time, as well as activity recommendations based on current conditions. Country images are fetched dynamically, and users can save destinations to a favorites list. The project demonstrates working with asynchronous API calls, combining multiple data sources, and building dynamic, user-driven interfaces. Designed in Figma: " +
 "<a href='https://www.figma.com/design/n7uY9FVuk8MsvMnHYGGpEp/Mini-travel-guide?node-id=0-1&t=C0j9iUOmdmBVZpHc-1' target='_blank'>View design</a>",
         ["TypeScript", "API integration", "REST APIs", "Frontend development", "DOM manipulation", "Dynamic UI", "Data merging", "Favourites system", "Figma", "Webdesign", "SCSS", "HTML"],
-        "https://my-mini-travel-guide.netlify.app/",
+        "https://mini-travel-guide.netlify.app/",
         "https://github.com/marcuswesterblom/mini-travel-guide.git"
     ),
     new ProjectCard(
