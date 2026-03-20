@@ -48,7 +48,7 @@
             object-fit: cover;
             object-position: center 25%;
             @include respond(lg){
-                object-position: calc(50% + 10px) 25%;
+                object-position: calc(50%) 25%;
             }
         }
     }
