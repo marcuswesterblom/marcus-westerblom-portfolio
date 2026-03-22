@@ -121,8 +121,8 @@ export const createHtml = () => {
     const contacts = [
         {   
             label: "E-mail", 
-            value: "marcus.vesterblom@gmail.com",
-            href: "mailto:marcus.vesterblom@gmail.com", 
+            value: "marcus.westerblom@medieinstitutet.se",
+            href: "mailto:marcus.westerblom@medieinstitutet.se", 
         },
         {
             label: "Phone",
